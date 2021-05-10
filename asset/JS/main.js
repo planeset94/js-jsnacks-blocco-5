@@ -236,22 +236,10 @@ if (a >= b) {
 console.log("Numero minore: " + a);
 
 
-// function newArray(array, num1, num2) {
-//     var risultato;
-//     for (var x = 1; x <= num1; x++) {
-//         array.shift();
-//     };
+function newArray(array, num1, num2) {
+    var l = array.length;
+    var newArray = array.splice(num1, num2 - num1);
+    return newArray;
+};
 
-//     for (var z = 1; z <= num2; z++) {
-//         array.pop();
-//     };
-//     return risultato = array;
-// };
-
-// console.log(newArray(list, a, b));
-
-
-// ALTERNATIVA + veloce
-var l = list.length;
-var newArray = list.splice(a, b - a);
-console.log(newArray);
+console.log(newArray(list, a, b));
