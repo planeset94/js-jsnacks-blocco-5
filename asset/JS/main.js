@@ -73,6 +73,7 @@ Infine stampa separatamente quanto pesano i due gruppi di zucchine.
 
 */
 
+/*
 var zucchina = [
 
     {
@@ -165,7 +166,25 @@ for (var i = 0; i < B.length; i++) {
     pesoB += +B[i];
 };
 
-
-
-
 heavyEl.innerHTML = `Il gruppo di zucchine di lunghezza >15 cm  pesa: ${pesoB} Kg `;
+*/
+
+
+
+/*
+Snack 3:
+Scrivi una funzione che accetti una stringa come argomento e la ritorni girata (es. Ciao -> oaiC)
+*/
+
+
+
+
+
+
+function reverseFunction(text) {
+    var risultato = text.split('').reverse().join('');
+    return risultato;
+
+}
+
+console.log(reverseFunction("ciao"));
