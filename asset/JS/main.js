@@ -193,7 +193,7 @@ Scrivi una funzione che fonda due array (aventi lo stesso numero di elementi) pr
 es. [a,b,c], [1,2,3] → [a,1,b,2,c,3].
 */
 
-
+/*
 var listA = ['a', 'n', 'd', 'r', 'e', 'a'];
 var listB = [14, 07, 1994, 186, 92, 1];
 
@@ -208,4 +208,47 @@ if (listA.length == listB.length) {
 
 
 console.log(listC);
+
+*/
+
+/*
+Snack 5:
+Scrivi una funzione che accetti tre argomenti:
+un array e due numeri (“a” più piccolo di “b” e “b” grande al massimo quanto il numero di elementi dell’array).
+La funzione ritornerà un nuovo array con i valori che hanno la posizione compresa tra “a” e “b”
+*/
+
+var list = [1, 'a', 'c', 2, 3, 4, 5, 7, 9, 10, 'f', 'op'];
+
+console.log(list);
+
+function randomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+var b = randomNumber(0, list.length);
+console.log("Numero maggiore: " + b);
+if (randomNumber(0, b) < b) {
+    var a = randomNumber(0, b);
+} else {
+    var a = randomNumber(0, b);
+}
+console.log("Numero minore: " + a);
+
+
+function newArray(array, num1, num2) {
+    var risultato;
+    for (var x = 1; x <= num1; x++) {
+        array.shift();
+    };
+
+    for (var z = 1; z <= num2; z++) {
+        array.pop();
+    };
+    return risultato = array;
+};
+
+console.log(newArray(list, a, b));
+
+
 
