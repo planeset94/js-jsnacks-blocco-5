@@ -223,32 +223,35 @@ var list = [1, 'a', 'c', 2, 3, 4, 5, 7, 9, 10, 'f', 'op'];
 console.log(list);
 
 function randomNumber(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
+    return Math.floor(Math.random() * (max - min)) + min;
 }
 
-var b = randomNumber(0, list.length);
+var b = randomNumber(1, list.length);
 console.log("Numero maggiore: " + b);
-if (randomNumber(0, b) < b) {
-    var a = randomNumber(0, b);
-} else {
-    var a = randomNumber(0, b);
+var a = randomNumber(0, b);
+if (a >= b) {
+    a = b - 1;
 }
+
 console.log("Numero minore: " + a);
 
 
-function newArray(array, num1, num2) {
-    var risultato;
-    for (var x = 1; x <= num1; x++) {
-        array.shift();
-    };
+// function newArray(array, num1, num2) {
+//     var risultato;
+//     for (var x = 1; x <= num1; x++) {
+//         array.shift();
+//     };
 
-    for (var z = 1; z <= num2; z++) {
-        array.pop();
-    };
-    return risultato = array;
-};
+//     for (var z = 1; z <= num2; z++) {
+//         array.pop();
+//     };
+//     return risultato = array;
+// };
 
-console.log(newArray(list, a, b));
+// console.log(newArray(list, a, b));
 
 
-
+// ALTERNATIVA + veloce
+var l = list.length;
+var newArray = list.splice(a, b - a);
+console.log(newArray);
