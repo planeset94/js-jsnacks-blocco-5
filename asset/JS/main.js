@@ -176,11 +176,7 @@ Snack 3:
 Scrivi una funzione che accetti una stringa come argomento e la ritorni girata (es. Ciao -> oaiC)
 */
 
-
-
-
-
-
+/*
 function reverseFunction(text) {
     var risultato = text.split('').reverse().join('');
     return risultato;
@@ -188,3 +184,28 @@ function reverseFunction(text) {
 }
 
 console.log(reverseFunction("ciao"));
+
+*/
+
+/*
+Snack 4:
+Scrivi una funzione che fonda due array (aventi lo stesso numero di elementi) prendendo alternativamente gli elementi da uno e dall’altro
+es. [a,b,c], [1,2,3] → [a,1,b,2,c,3].
+*/
+
+
+var listA = ['a', 'n', 'd', 'r', 'e', 'a'];
+var listB = [14, 07, 1994, 186, 92, 1];
+
+if (listA.length == listB.length) {
+    var listC = [];
+    for (var i = 0; i < listB.length; i++) {
+        listC.push(listA[i]), listC.push(listB[i]);
+    };
+} else {
+    alert('inserire lo stesso numero di elementi nelle due matrici');
+};
+
+
+console.log(listC);
+
