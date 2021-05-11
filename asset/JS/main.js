@@ -184,7 +184,21 @@ function reverseFunction(text) {
 }
 
 console.log(reverseFunction("ciao"));
+*/
 
+//ALTERNATIVA 
+
+/*
+ function reverseString(text) {
+    var parola = "";
+    for (var i = (text.length - 1); i >= 0; i--) {
+        parola += text[i];
+    };
+    return parola;
+
+};
+
+console.log(reverseString('accidentaccio a te'));
 */
 
 /*
@@ -218,6 +232,7 @@ un array e due numeri (“a” più piccolo di “b” e “b” grande al massi
 La funzione ritornerà un nuovo array con i valori che hanno la posizione compresa tra “a” e “b”
 */
 
+/*
 var list = [1, 'a', 'c', 2, 3, 4, 5, 7, 9, 10, 'f', 'op'];
 
 console.log(list);
@@ -243,3 +258,5 @@ function newArray(array, num1, num2) {
 };
 
 console.log(newArray(list, a, b));
+*/
+
